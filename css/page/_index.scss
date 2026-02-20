@@ -1,24 +1,175 @@
-
+$c-primary:#0088FF;
 
 main{
-  padding-top: 130px;
+  padding-top: 120px;
   .inner{
     display: flex;
     // justify-content: space-between;
     section{
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       .section-title{
         font-size: 48px;
+        line-height: 56px;
       }
     }
     .profile{
       max-width: 470px;
-      padding-top: 25px;
+      .profilewrap{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        .profile-img{
+          // max-width: 220px;
+          flex: 1 1 0;
+          min-width: 0;
+          max-width: 100%;
+          // width: 100%;
+          object-fit: cover;
+        }
+        .profileinfo{
+          flex: 0 0 230px;
+          max-width: 230px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          gap: 10px;
+          .info-item{
+            display: flex;
+            align-items: center;
+            img{
+              width: 24px;
+              height: 24px;
+            }
+            p{
+              margin-left: 10px;
+              font-size: 18px;
+            }
+          }
+        }
+
+      }
+      .desc{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        img{
+          width: 32px;
+          height: 32px;
+        }
+        p{
+          font-size: 22px;
+        }
+      }
+      .desc-sub{
+        color: #CCC;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
+      #profile-content{
+        display: flex;
+        flex-direction: column;
+        .profile-content-item{
+          font-size: 24px;
+        }
+        .profile-content-item-sub{
+          margin-bottom: 20px;
+          font-size: 16px;
+          color: #CCC;
+        }
+      }
     }
     .skill{
       max-width: 850px;
-      padding: 25px;
+      padding-left: 25px;
+      #skill-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,191px);
+        gap: 20px;
+        overflow-y: auto;
+        max-height: 700px;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+        .skill-card{
+          
+          min-height: 252px;
+          cursor: default;
+          border: 2px solid #ffffff1a;
+          background-color: #ffffff1a;
+          backdrop-filter: blur(5px);
+          box-shadow: 2px 2px 7px #777777b6;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          padding: 20px;
+          .skill-{
+            &image{
+              width: 70px;height: 70px;
+            }
+            &name{
+              font-weight: bold;
+              font-size: 20px;
+            }
+            &sub{
+              word-break:keep-all;
+              font-size: 14px;
+              line-height: 18px;
+              color: #CCC;
+            }
+          }
+        }
+      }
     }
+  }
+  @media (max-width:940px){
+    padding-top: 90px;
+    .inner{
+      flex-direction: column;
+      padding: 0 20px;
+      .profile{
+        max-width: 940px;
+        width: 100%;
+        .profilewrap{
+          .profile-img{
+            max-width: 400px;
+          }
+        }
+      }
+      .skill{
+        padding: 0;
+        #skill-grid{
+          grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+        }
+      }
+    }
+  }
+}
 
+.btn-wrap{
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid $c-primary;
+  .btn{
+    background-color: gray;
+    color: white;
+    padding: 6px 14px;
+    font-size: 22px;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid gray;
+    transition: 0.3s;
+    &:hover{
+      border: 2px solid $c-primary;
+    }
+    &.active{
+      border-color: $c-primary;
+      background-color: $c-primary;
+    }
   }
 }

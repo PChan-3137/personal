@@ -77,30 +77,6 @@ table {
   box-sizing: border-box;
 }
 
-.quantico-regular {
-  font-family: "Quantico", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.quantico-bold {
-  font-family: "Quantico", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.quantico-regular-italic {
-  font-family: "Quantico", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.quantico-bold-italic {
-  font-family: "Quantico", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
 @font-face {
   font-family: "NexonLv1Gothic";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
@@ -120,24 +96,171 @@ table {
   font-display: swap;
 }
 main {
-  padding-top: 130px;
+  padding-top: 120px;
 }
 main .inner {
   display: flex;
 }
 main .inner section {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 main .inner section .section-title {
   font-size: 48px;
+  line-height: 56px;
 }
 main .inner .profile {
   max-width: 470px;
-  padding-top: 25px;
+}
+main .inner .profile .profilewrap {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+main .inner .profile .profilewrap .profile-img {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+  object-fit: cover;
+}
+main .inner .profile .profilewrap .profileinfo {
+  flex: 0 0 230px;
+  max-width: 230px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+main .inner .profile .profilewrap .profileinfo .info-item {
+  display: flex;
+  align-items: center;
+}
+main .inner .profile .profilewrap .profileinfo .info-item img {
+  width: 24px;
+  height: 24px;
+}
+main .inner .profile .profilewrap .profileinfo .info-item p {
+  margin-left: 10px;
+  font-size: 18px;
+}
+main .inner .profile .desc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .inner .profile .desc img {
+  width: 32px;
+  height: 32px;
+}
+main .inner .profile .desc p {
+  font-size: 22px;
+}
+main .inner .profile .desc-sub {
+  color: #CCC;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+main .inner .profile #profile-content {
+  display: flex;
+  flex-direction: column;
+}
+main .inner .profile #profile-content .profile-content-item {
+  font-size: 24px;
+}
+main .inner .profile #profile-content .profile-content-item-sub {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #CCC;
 }
 main .inner .skill {
   max-width: 850px;
-  padding: 25px;
+  padding-left: 25px;
+}
+main .inner .skill #skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 191px);
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 700px;
+}
+main .inner .skill #skill-grid::-webkit-scrollbar {
+  display: none;
+}
+main .inner .skill #skill-grid .skill-card {
+  min-height: 252px;
+  cursor: default;
+  border: 2px solid rgba(255, 255, 255, 0.1019607843);
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  backdrop-filter: blur(5px);
+  box-shadow: 2px 2px 7px rgba(119, 119, 119, 0.7137254902);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+main .inner .skill #skill-grid .skill-card .skill-image {
+  width: 70px;
+  height: 70px;
+}
+main .inner .skill #skill-grid .skill-card .skill-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+main .inner .skill #skill-grid .skill-card .skill-sub {
+  word-break: keep-all;
+  font-size: 14px;
+  line-height: 18px;
+  color: #CCC;
+}
+@media (max-width: 940px) {
+  main {
+    padding-top: 90px;
+  }
+  main .inner {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  main .inner .profile {
+    max-width: 940px;
+    width: 100%;
+  }
+  main .inner .profile .profilewrap .profile-img {
+    max-width: 400px;
+  }
+  main .inner .skill {
+    padding: 0;
+  }
+  main .inner .skill #skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #0088FF;
+}
+.btn-wrap .btn {
+  background-color: gray;
+  color: white;
+  padding: 6px 14px;
+  font-size: 22px;
+  border-radius: 5px 5px 0 0;
+  border: 2px solid gray;
+  transition: 0.3s;
+}
+.btn-wrap .btn:hover {
+  border: 2px solid #0088FF;
+}
+.btn-wrap .btn.active {
+  border-color: #0088FF;
+  background-color: #0088FF;
 }
 
 body {
@@ -146,7 +269,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  height: 3000px;
 }
 
 .inner {
@@ -203,4 +325,18 @@ body {
 }
 #header .inner .nav .nav-item:hover::before, #header .inner .nav .nav-item.active::before {
   transform: scaleX(1);
+}
+@media (max-width: 940px) {
+  #header {
+    height: 70px;
+  }
+  #header .inner .logo {
+    font-size: 36px;
+  }
+  #header .inner .nav {
+    font-size: 24px;
+  }
+  #header .inner .nav .nav-item::before {
+    bottom: -7px;
+  }
 }

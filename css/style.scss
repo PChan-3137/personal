@@ -1,9 +1,10 @@
 @use 'base/reset';
 @use 'base/font';
-@use 'base/variables' as v;
 @use 'base/mixin' as m;
 @use 'page/index';
 @use 'page/project';
+
+$c-primary:#0088FF;
 
 body{
   font-family:  "Quantico",'NexonLv1Gothic', sans-serif;
@@ -11,7 +12,6 @@ body{
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  height: 3000px;
 }
 .inner{
 
@@ -47,23 +47,37 @@ body{
         &::before{
           content: '';
           position: absolute;
-          color: v.$c-primary;
+          color: $c-primary;
           left: 0;
           width: 100%;
           bottom: -15px;
-          border-bottom: 4px solid v.$c-primary;
+          border-bottom: 4px solid $c-primary;
           transition: 0.3s;
           transform: scaleX(0);
           transform-origin: center;
         }
         &:hover,&.active{
-          color: v.$c-primary;
+          color: $c-primary;
           span{
             transform: translateY(-3px);
           }
           &::before{
             transform:scaleX(1);
           }
+        }
+      }
+    }
+  }
+  @media (max-width:940px){
+    height: 70px;
+    .inner{
+      .logo{
+        font-size: 36px;
+      }
+      .nav{
+        font-size: 24px;
+        .nav-item::before{
+          bottom: -7px;
         }
       }
     }

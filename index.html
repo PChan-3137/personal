@@ -22,11 +22,51 @@
     <div class="inner">
       <section class="profile">
         <h1 class="section-title">Profile</h1>
+        <div class="profilewrap">
+          <img class="profile-img" src="image/profile.webp" alt="">
+          <div class="profileinfo">
+            <div class="info-item">
+              <img src="image/user.png" alt="">
+              <p>박찬</p>
+            </div>
+            <div class="info-item">
+              <img src="image/Home.png" alt="">
+              <p>대전 중구</p>
+            </div>
+            <div class="info-item">
+              <img src="image/mail.png" alt="">
+              <p>pc313711@gmail.com</p>
+            </div>
+            <div class="info-item">
+              <img src="image/Phone.png" alt="">
+              <p>010-7689-3137</p>
+            </div>
+          </div>
+        </div>
+        <div class="desc">
+          <img src="image/chat.png" alt="">
+          <p>사용자 경험을 중시하는 개발자를 지향합니다.</p>
+        </div>
+        <p class="desc-sub">기술은 목적이 아니라, 더 나은 경험을 위한 수단이라고 생각합니다.<br>
+        작은 불편함도 놓치지 않기 위해 끊임없이 점검하고 개선합니다.<br>
+        사용자와 팀 모두에게 편안한 경험을 제공하는 개발자를 지향합니다.<br></p>
+        <div class="btn-wrap">
+          <button class="btn profile-tab btn1 active" data-category="edu">학업·교육</button>
+          <button class="btn profile-tab btn2" data-category="exp">경력</button>
+        </div>
+        <div id="profile-content"></div>
       </section>
       <section class="skill">
         <h1 class="section-title">Skill</h1>
+        <div class="btn-wrap">
+          <button class="btn skill-tab btn1 active" data-category="stack">Stack</button>
+          <button class="btn skill-tab btn2" data-category="design">Design</button>
+          <button class="btn skill-tab btn3" data-category="etc">ETC</button>
+        </div>
+        <div id="skill-grid"></div>
       </section>
     </div>
   </main>
+  <script type="module" src="js/index.js"></script>
 </body>
 </html>
