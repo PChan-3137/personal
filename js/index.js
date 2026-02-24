@@ -26,7 +26,7 @@ function profileRender(category) {
 
 function skillRender(category){
   Scontent.innerHTML = "";
-  const filtered = skillDatas.filter(p => p.category.includes(category));
+  const filtered = category === "all" ? skillDatas : skillDatas.filter(p => p.category.includes(category));
 
   filtered.forEach(content => {
     const card = document.createElement("div");
@@ -68,4 +68,4 @@ Sbtn.forEach(tab => {
 });
 
 profileRender("edu");
-skillRender("stack");
+skillRender("all");
