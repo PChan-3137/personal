@@ -107,48 +107,6 @@ export const portfolio = [
     sub2:"대전학생교육문화원 사이트의 정보 구조 개선 및 가독성,탐색 편의성 향상을 위해 일부 페이지를 리뉴얼하였습니다."
   },
   {
-    name: "한국한의학연구원 클론코딩",
-    sub:"웹 표준 준수를 위한 메인페이지 클론코딩입니다.",
-    skill: ["HTML","CSS","Sass","JavaScript"],
-    image: "image/clone2.png",
-    skills: ["HTML5","CSS3","SCSS","JavaScript"],
-    Tools: ["VSC","Figma"],
-    date: "2026.02.07 ~ 2026.02.10",
-    people: "1명",
-    role: "구현",
-    github:"https://github.com/PChan-3137/Clone_coding2",
-    url:"https://pchan-3137.github.io/Clone_coding2/",
-    sub2:"Swiper,JS 연습 및 웹 표준 준수를 위한 시맨틱 태그 기반 구조 설계등을 진행하였습니다."
-  },
-  {
-    name: "Balboa 클론코딩",
-    sub:"팝업 및 Swiper 연습을 위한 메인페이지 클론코딩입니다.",
-    skill: ["HTML","CSS","JavaScript"],
-    image: "image/clone1.png",
-    skills: ["HTML5","CSS3","JavaScript"],
-    Tools: ["VSC","Figma"],
-    date: "2025.11.21 ~ 2025.12.24",
-    people: "1명",
-    role: "구현",
-    github:"https://github.com/PChan-3137/Clone_coding",
-    url:"https://pchan-3137.github.io/Clone_coding/",
-    sub2:"swiper를 사용한 팝업 및 반응형 구현 프로젝트입니다."
-  },
-  {
-    name: "프리미엄 쇼핑몰 슈피겐(Spigen)",
-    sub:"실전 웹 개발 및 상태 관리, 컴포넌트 기발 개발 학습 프로젝트입니다.",
-    skill: ["HTML","CSS","Sass","JavaScript"],
-    image: "image/spigen.png",
-    skills: ["HTML5","CSS3","SCSS","JavaScript"],
-    Tools: ["VSC","Figma"],
-    date: "2025.12.26 ~ 2026.01.30",
-    people: "1명",
-    role: "기획, 디자인, 구현",
-    github:"https://github.com/PChan-3137/Spigen",
-    url:"https://pchan-3137.github.io/Spigen/",
-    sub2:"사용자 친화적인 인터페이스와 완전한 반응형 디자인을 갖춘 주변기기 플랫폼 구현입니다."
-  },
-  {
     name: "코카-콜라 홈페이지 리뉴얼",
     sub:"팀 프로젝트 작업물입니다.",
     skill: ["HTML","CSS","Sass","JavaScript"],
@@ -176,4 +134,49 @@ export const portfolio = [
     url:"https://pchan-3137.github.io/personal/",
     sub2:"포트폴리오 웹사이트입니다. 탭 버튼 및 그리드,카드 디자인으로 한번에 확인하기 편한 사이트를 지향했습니다."
   },
+  {
+    name: "프리미엄 쇼핑몰 슈피겐(Spigen)",
+    sub:"실전 웹 개발 및 상태 관리, 컴포넌트 기발 개발 학습 프로젝트입니다.",
+    skill: ["HTML","CSS","Sass","JavaScript"],
+    image: "image/spigen.png",
+    skills: ["HTML5","CSS3","SCSS","JavaScript"],
+    Tools: ["VSC","Figma"],
+    date: "2025.12.26 ~ 2026.01.30",
+    people: "1명",
+    role: "기획, 디자인, 구현",
+    github:"https://github.com/PChan-3137/Spigen",
+    url:"https://pchan-3137.github.io/Spigen/",
+    sub2:"사용자 친화적인 인터페이스와 완전한 반응형 디자인을 갖춘 주변기기 플랫폼 구현입니다."
+  },
+  {
+    name: "한국한의학연구원 클론코딩",
+    sub:"웹 표준 준수를 위한 메인페이지 클론코딩입니다.",
+    skill: ["HTML","CSS","Sass","JavaScript"],
+    image: "image/clone2.png",
+    skills: ["HTML5","CSS3","SCSS","JavaScript"],
+    Tools: ["VSC","Figma"],
+    date: "2026.02.07 ~ 2026.02.10",
+    people: "1명",
+    role: "구현",
+    github:"https://github.com/PChan-3137/Clone_coding2",
+    url:"https://pchan-3137.github.io/Clone_coding2/",
+    sub2:"Swiper,JS 연습 및 웹 표준 준수를 위한 시맨틱 태그 기반 구조 설계등을 진행하였습니다."
+  },
+  {
+    name: "Balboa 클론코딩",
+    sub:"팝업 및 Swiper 연습을 위한 메인페이지 클론코딩입니다.",
+    skill: ["HTML","CSS","JavaScript"],
+    image: "image/clone1.png",
+    skills: ["HTML5","CSS3","JavaScript"],
+    Tools: ["VSC","Figma"],
+    date: "2025.11.21 ~ 2025.12.24",
+    people: "1명",
+    role: "구현",
+    github:"https://github.com/PChan-3137/Clone_coding",
+    url:"https://pchan-3137.github.io/Clone_coding/",
+    sub2:"swiper를 사용한 팝업 및 반응형 구현 프로젝트입니다."
+  },
+  
+
+
 ]

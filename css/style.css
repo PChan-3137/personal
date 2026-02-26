@@ -232,6 +232,7 @@ main .inner .skill #skill-grid .skill-card .skill-sub {
   main .inner .profile {
     max-width: 940px;
     width: 100%;
+    margin-bottom: 50px;
   }
   main .inner .skill {
     padding: 0;
@@ -688,6 +689,9 @@ body {
     bottom: -3px;
   }
   #header .inner .nav .nav-item::after {
+    display: none;
+  }
+  #header .inner .nav .nav-item:last-child {
     display: none;
   }
 }

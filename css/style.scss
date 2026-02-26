@@ -134,6 +134,9 @@ body{
           &::after{
             display: none;
           }
+          &:last-child{
+            display: none;
+          }
         }
       }
     }
